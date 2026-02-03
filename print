@@ -1,0 +1,119 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine Proposal 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: pink;
+      font-family: 'Comic Sans MS', cursive;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* flower sides */
+    body::before,
+    body::after {
+      content: "🌸🌼🌺🌷🌸🌼🌺🌷";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 80px;
+      writing-mode: vertical-rl;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    body::before {
+      left: 0;
+    }
+
+    body::after {
+      right: 0;
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 20px;
+      width: 300px;
+    }
+
+    h1 {
+      color: #d63384;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .yes {
+      background-color: #ff69b4;
+      color: white;
+    }
+
+    .no {
+      background-color: #aaa;
+      color: white;
+    }
+
+    img {
+      max-width: 100%;
+      margin-top: 15px;
+      border-radius: 10px;
+    }
+
+    #result {
+      display: none;
+    }
+
+    #donkey {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Will you be my Valentine? 💘</h1>
+
+    <button class="yes" onclick="yesClicked()">Yes</button>
+    <button class="no" onclick="noClicked()">No</button>
+
+    <div id="result">
+      <h2 id="resultText"></h2>
+      <img id="resultImg">
+    </div>
+
+    <img id="donkey" src="donkey.gif" alt="Donkey">
+  </div>
+
+  <script>
+    function yesClicked() {
+      document.getElementById("result").style.display = "block";
+      document.getElementById("resultText").innerText = "YIPEE!!! 💕🎉";
+      document.getElementById("resultImg").src = "roderick.webp";
+    }
+
+    function noClicked() {
+      document.getElementById("result").style.display = "block";
+      document.getElementById("resultText").innerText = "";
+      document.getElementById("resultImg").src = "alden.jpg";
+    }
+  </script>
+
+</body>
+</html>
